@@ -18,7 +18,8 @@ namespace FunctionApi.Functions
             _logger = logger;
             _context = context;
         }
-
+        
+        //deletes a book by its id
         [Function("DeleteBook")]
         public async Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Function, "delete", Route = "books/{id}")] HttpRequest req, int id)
         {

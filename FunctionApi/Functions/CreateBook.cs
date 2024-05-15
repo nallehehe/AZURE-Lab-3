@@ -20,6 +20,7 @@ namespace FunctionApi.Functions
             _context = context;
         }
 
+        //input a title and author into the body to create a book
         [Function("CreateBook")]
         public async Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Function, "post", Route = "books")] HttpRequest req)
         {

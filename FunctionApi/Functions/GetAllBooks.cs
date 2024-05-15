@@ -18,6 +18,8 @@ namespace FunctionApi.Functions
             _context = context;
         }
 
+
+        //getting all books
         [Function("GetAllBooks")]
         public async Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Function, "get", Route = "books")] HttpRequest req)
         {

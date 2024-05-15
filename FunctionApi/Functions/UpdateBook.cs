@@ -20,6 +20,8 @@ namespace FunctionApi.Functions
             _context = context;
         }
 
+
+        //overwrites an existing book already with a new title and author by id
         [Function("UpdateBook")]
         public async Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Function, "put", Route = "books/{id}")] HttpRequest req, int id)
         {
